@@ -60,10 +60,27 @@
             <!-- VSL -->         
             <div style="position:relative;padding-top:56.25%;"><iframe id="panda-1e5a5da7-8775-4a64-9597-15af6dac497d" src="https://player-vz-4d5ce080-52c.tv.pandavideo.com.br/embed/?v=1e5a5da7-8775-4a64-9597-15af6dac497d" style="border:none;position:absolute;top:0;left:0;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen=true width="100%" height="100%"></iframe></div>
             <br>
-<div id="viewers">
-<span></span> <canvas style="margin-left:1em;margin-right:1em;background-color: #00ff00;width:10px;height:10px;border-radius:100%"></canvas>pessoas estão assistindo a esse vídeo agora!
+             <div id="viewers">
+  <span></span>  <canvas style="margin-left:1em;margin-right:1em;background-color: #00ff00;width:10px;height:10px;border-radius:100%"></canvas>pessoas estão assistindo a esse vídeo agora! 
 </div>
 <script>
+  document.querySelectorAll("#viewers span")[0].innerHTML = getUsersView();
+
+  setInterval(() => {
+    updatesUsersView();
+  }, 2500);
+
+  function getUsersView() {
+    return Math.floor(Math.random() * (Math.floor(910) - Math.ceil(690))) + Math.ceil(690);
+  }
+
+  function updatesUsersView() {
+    var currentUsers = document.querySelectorAll("#viewers span")[0].innerHTML;
+    var users = Math.floor(Math.random() * (Math.floor(40) - Math.ceil(-40))) + Math.ceil(-40);
+    currentUsers = parseInt(currentUsers) < 690 ? parseInt(currentUsers) + users * user : parseInt(currentUsers) + users;
+    document.querySelectorAll("#viewers span")[0].innerHTML = currentUsers;
+  }
+</script>
             <!-- Botão 1 -->
             <div id="cta1" class="mt-4 d-none">
               <a href="https://pay.kiwify.com.br/OiGy5Xh?afid=xGGppt17" class="a-btn" style="text-decoration: none;">
