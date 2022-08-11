@@ -93,11 +93,15 @@ urlKiwi=https://pay.kiwify.com.br/OiGy5Xh?afid=xGGppt17'+'&utm_source='+$_GET['u
 </script>
     </head>
   <body>
-    <header class="py-4">
             <!-- Imagem Ultrasecreto -->
               <img src="./assets/img/capappp.png" class="img-fluid" alt="Responsive image">
-           
-            <!-- Headline -->
+    <header class="py-4">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <!-- VSL -->         
+            <div style="position:relative;padding-top:56.25%;"><iframe id="panda-1e5a5da7-8775-4a64-9597-15af6dac497d" src="https://player-vz-4d5ce080-52c.tv.pandavideo.com.br/embed/?v=1e5a5da7-8775-4a64-9597-15af6dac497d" style="border:none;position:absolute;top:0;left:0;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen=true width="100%" height="100%"></iframe></div>
+                 <!-- Headline -->
             <h7 class="my-4"><b>Devido à alta demanda de acessos, garantimos a apresentação somente até <span style="color:#FE0000"><span id="descounttime"></span></span></b></h7>
 
             <script language="javascript">
@@ -108,31 +112,6 @@ var dayOfTheWeek = getNow.getDay();
 getNow.setTime(getNow.getTime() - 0 * 24 * 60 * 60 * 1000);
 document.getElementById("descounttime").innerHTML =  getNow.getDate() + "/" + getdayMonth[(getNow.getMonth())] + "/" + getNow.getFullYear();
 
-</script>
- 
-            <!-- VSL -->         
-            <div style="position:relative;padding-top:56.25%;"><iframe id="panda-1e5a5da7-8775-4a64-9597-15af6dac497d" src="https://player-vz-4d5ce080-52c.tv.pandavideo.com.br/embed/?v=1e5a5da7-8775-4a64-9597-15af6dac497d" style="border:none;position:absolute;top:0;left:0;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen=true width="100%" height="100%"></iframe></div>
-             <div id="viewers">
-  <span></span><canvas style="margin-left:1em;margin-right:1em;background-color: #00ff00;width:10px;height:10px;border-radius:100%"></canvas>Pessoas Estão Assistindo a Esse Vídeo Agora!
-</div>
-           
-<script>
-  document.querySelectorAll("#viewers span")[0].innerHTML = getUsersView();
-
-  setInterval(() => {
-    updatesUsersView();
-  }, 2500);
-
-  function getUsersView() {
-    return Math.floor(Math.random() * (Math.floor(910) - Math.ceil(690))) + Math.ceil(690);
-  }
-
-  function updatesUsersView() {
-    var currentUsers = document.querySelectorAll("#viewers span")[0].innerHTML;
-    var users = Math.floor(Math.random() * (Math.floor(40) - Math.ceil(-40))) + Math.ceil(-40);
-    currentUsers = parseInt(currentUsers) < 690 ? parseInt(currentUsers) + users * user : parseInt(currentUsers) + users;
-    document.querySelectorAll("#viewers span")[0].innerHTML = currentUsers;
-  }
 </script>
             <!-- Botão 1 -->
             <div id="cta1" class="mt-4 d-none">
